@@ -8,7 +8,7 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
 
-	//METHODS
+	//INSTANCE VARS
 	private boolean[][] isGridSiteOpen;
 	private WeightedQuickUnionUF quickUnion;
 	private WeightedQuickUnionUF backWash;
@@ -156,7 +156,7 @@ public class Percolation {
 	 * @return corresponding number to the 2d grid
 	 */
 	private int xyToOneD(int i, int j) {
-		return (LENGTH * i) + j;
+		return (LENGTH * i) + j + 1;
 	}
 
 	/**
@@ -172,9 +172,14 @@ public class Percolation {
 		if (j < 0 || j >= LENGTH)
 			throw new IndexOutOfBoundsException("column index " + j + " must be between 0 and " + (LENGTH - 1));
 	}
-
-	private int numberOfOpenSites() {
+	
+	/**
+	 * Calculates number of opened sites
+	 * @return numberOfOpenSites
+	 */
+	public int numberOfOpenSites() {
 		return openSites;
 	}
-
-}
+	
+	}
+	
