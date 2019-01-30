@@ -45,7 +45,7 @@ public class Percolation {
 	* to the other open bottom sites through the virtualBottom site.
 	*/ 
 		quickUnion = new WeightedQuickUnionUF(totSites + 3); 		// three are added to include the virtual sites
-		backWash = new WeightedQuickUnionUf(totSites + 1);		// one extra to have sites be between 0 to N-1
+		backWash = new WeightedQuickUnionUF(totSites + 1);		// one extra to have sites be between 0 to N-1
 	}
 
 
