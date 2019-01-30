@@ -36,6 +36,7 @@ public class Percolation {
 		virtualTop = totSites + 1; 					// adds one extra site to the grid
 		virtualBottom = totSites + 2; 					// adds a second extra site to the grid
 		quickUnion = new WeightedQuickUnionUF(totSites + 3); 	// three are added to include the virtual sites
+		backWash = new WeightedQuickUnionUf(totSites + 1);		//adds the backWash quick union
 	}
 
 
@@ -132,7 +133,7 @@ public class Percolation {
 	 * @return corresponding number to the 2d grid
 	 */
 	private int xyToOneD(int i, int j) {
-		return (LENGTH * i) + j;
+		return (LENGTH+1 * i) + j;
 	}
 
 	/**
